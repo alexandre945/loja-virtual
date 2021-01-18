@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkaut</title>
+</head>
+<body>
+    <div id="app">
+        <div :style="styles">
+            <a href="index.html"><button style="background-color: rgb(40, 40, 175); color: cornsilk;">VOLTAR</button></a>
+            <h1>escolha seu Chá preferido aqui:</h1>
+            <h2>preço unitario $45 + fret</h2>
+            <hr>
+            <button style="background-color: rgb(40, 40, 175); color: cornsilk;"><h3>carrinho({{ cart.length }})</h3></button>
+            <ul>
+               <li v-for="(product, index) in products" :key="index">
+                   <p>{{ product.title }} {{ product.preço }}</p>
+                   <img :src="product.image":alt="product.title" style="max-width: 300px;"><br>
+                   <a href="#" v-on:click.ptrevent="addCart(product)"><button style="background-color: rgb(40, 40, 175); color: cornsilk;">ADICIONAR NO CARRINHO</button></a>
+                   <a href="#" v-on:click.prevent="removeCart(product)"><button style="background-color: rgb(40, 40, 175); color: cornsilk;">REMOVER DO CARRINHO</button></a><br>
+       
+               </li>   
+        </div>
+     
+
+    </div>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app ={
+            data() {
+                return {
+                   
+                    products: [
+                    {
+                        title:'Chà emagrecedor',
+                        description:'ajuda emagrecer',
+                        image:'./imagens/CHAFIN2.png',
+                        preço: '$45',
+                    },
+                    {
+                      title:'Chà relachante',
+                      desctiption:'ajuda dormir',
+                      image:'./imagens/CHAREL2.png', 
+                      preço: '$45', 
+                    },
+                    {
+                        title:'Chà detox',
+                        description:'ajuda na eliminaÇáo de gordura',
+                        image:'./imagens/CHAREL2.png',
+                        preço: '$45',
+                    },
+
+                    ],
+                    cart:[],
+                    styles: {
+                        backgroundColor:'cadetblue',
+                        color:'#fff',
+                        
+                    }
+                    
+                }
+            },
+            methods: {
+                addCart (product) {
+                  this.cart.push(product)
+                },
+                removeCart (product) {
+                  this.cart = this.cart.filter((prod,index) => product !=prod) 
+                },
+               }
+            }
+        
+        Vue.createApp(app).mount('#app')
+    </script>
+
+    
+
+
+</body>
+</html>

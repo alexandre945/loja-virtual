@@ -1,0 +1,132 @@
+
+body {
+	background-color: cadetblue;
+}
+.img1 {
+	display: flex;
+	border: solid 2px black;
+}
+.img2 {
+	display: flex;
+	border: solid 2px black;
+}
+.img3 {
+	display: flex;
+	border: solid 2px black;
+}
+.soma {
+	display: flex;
+	margin-left: 500px;
+	border: solid 2px black;
+}
+img#foto1 {
+	height: 450px;
+	width: 500px;
+}
+img#foto2 {
+	height: 450px;
+	width: 500px;
+	
+}
+img#foto3 {
+	height: 450px;
+	width: 500px;
+
+}
+img#carrinho {
+	height: 30px;
+	width: 50px;
+	background-color: blue;
+	color: blue;
+	margin-top: 0px;
+	
+	
+}
+span {
+	border: solid 1px black;
+	border-radius: 8px;
+	background-color: blue;
+	margin-bottom: 20px;
+	margin-left: 900px;
+	width: 300px;
+	height: 70px;
+	padding: 20px;
+
+	
+
+
+}
+input {
+	height: 70px;
+	width: 130px;
+	margin-top: 375px;
+	background-color: darkgray;
+	font-size: 25pt;
+	cursor: pointer;
+	color: black;
+	
+}
+input#car {
+	margin-top: 0px;
+}
+input#card {
+	height: 70px;
+	width: 200px;
+
+}
+input#card2 {
+	height: 70px;
+	width: 200px;
+}
+input#card3 {
+	height: 70px;
+	width: 200px;
+}
+input#TotalCompra {
+	margin-top: 0px;
+}
+button { 
+     color: wheat; 
+     background-color: blue; 
+	 width: 150px; 
+	 height: 60px; 
+	 border-radius: 8px; 
+	 cursor: pointer; 
+	
+} 
+h1 {
+	 margin-left: 350px; 
+	font-family: 'Courier New', Courier, monospace;
+	color: white;
+	font-size: 25pt;
+	
+}
+h2 {
+	margin-left: 200px;
+	font-family: 'Courier New', Courier, monospace;
+	color: white;
+	margin-top: 100px;
+	font-size: 25pt;
+}
+h2#valor {
+	margin-left: 350px;
+	margin-top: 10px;
+}
+
+.preparo {
+	margin-left: 150px;
+	font-size: 20pt;
+	font-family: 'Courier New', Courier, monospace;
+}
+p#modo {
+	font-size: 20pt;
+	font-family: 'Courier New';
+}
+::placeholder {
+	color: black;
+	font-size: 20pt;
+}
+@media (min-widht: 700px) {
+
+}
+

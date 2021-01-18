@@ -1,0 +1,75 @@
+
+
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkaut</title>
+</head>
+<body>
+    <div id="app">
+        <div :style="styles">
+            <a href="finaliza.html"><button style="background-color: rgb(40, 40, 175); color: cornsilk;">COMPRAR</button></a>
+            <a href="index.html"><button style="background-color: rgb(40, 40, 175); color: cornsilk;">VOLTAR</button></a>
+            <h1>Seu chà pronto em um minuto:</h1>
+            <h2>Facilidade e plasticidade</h2>
+            <hr>
+          
+            <ul>
+               <li v-for="(product, index) in products" :key="index">
+                   <p>{{ product.title }} {{ product.preço }} </p>
+                   <img :src="product.image":alt="product.title" style="max-width: 200px;"><br>
+               </li>
+               <ol> 
+                   <h3>MODO DE PREPARO</h3>
+                   <li> Coloque um comprimido efervecente</li>
+                   <li>Em copo com aproximadamente 300ML de àgua</li>
+                   <li>Àgua fria ou morna de sua preferência</li>
+                   <li>espere disouver esta pronto</li>
+                   <li>Uma vez por dia no Horario de sua prefrência</li>
+                   <li>Não exceda quantidade diarìa indicada na embalagem</li>
+                   <li>Importante comsumir logo após preparo</li>
+                  
+                  
+                      
+               </ol>
+            </ul>   
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app ={
+            data() {
+                return {
+                   
+                    products: [
+                    {
+                        title:'Chà emagrecedor',
+                        description:'ajuda emagrecer',
+                        image:'./imagens/CHAREL2.png',
+                        preço: '$45',
+                    },
+                    
+
+                    ],
+                    
+                    styles: {
+                        backgroundColor:'cadetblue',
+                        color:'brack',
+                    
+                        
+                        
+                    }
+                    
+                }
+            },
+            
+            }
+        
+        Vue.createApp(app).mount('#app')
+    </script>
+</body>
+</html>

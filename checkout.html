@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="checkout.css" rel="stylesheet">
+  <link rel="stylesheet" href="checkout.js">
+  <title>checkout</title>
+</head>
+<body>
+	<a href="index.html"><button id="vtr">VOLTAR</button></a>
+	<span><img id="carrinho" src="../loja/imagens/carrinho.png"></span>
+	<h1 id="escolha">escolha seu produto desejado:</h1>
+	<h2 id="valor">Valor unitarío $40 + (Frete)</h2>
+ <form  name="formulario" method="POST"  oninput= "calc_total();"> 
+<div class="container"> 
+		<div class="img1">
+	  			<img name="bom sono"id="foto1" src="../loja/imagens/bomsono.png"><br>
+			  	<input  id="tt1" type="number">
+				<input name="input1"  id="tot1" type ="number" value = "0" placeholder="$TOTAL" readonly>
+				<input  name="inputcar"  id="card" type ="number"  placeholder="add no carrinho" readonly>
+				  
+		</div>
+	   		<div class="img2">
+	    		<img name="Detox"id="foto2"src="../loja/imagens/detox.png"><br>
+				<input id="tt2" type="number">
+				<input name="input2"  id="tot2" type ="number" value = "0"  placeholder="$TOTAL" readonly>
+				<input name="inputcar"  id="card2" type ="number"  placeholder="add no carrinho" readonly>
+
+			</div>
+	 	<div class="img3">
+				<img name="Slin"id="foto3"src="../loja/imagens/slin.png">
+				<input id="tt3" type="number">
+				<input name="input3" id="tot3" type ="number" value = "0" placeholder="$TOTAL" readonly>
+				<input name="inputcar"  id="card3" type ="number"  placeholder="add no carrinho" readonly>
+				  
+		</div>
+		 		<div class="soma">
+				<input name="TotalCompra" id="TotalCompra" type ="number" value = "0" placeholder="$TOTAL" readonly>
+				<input id="car" type="number"  placeholder="Ver Carrinho" readonly>
+		</div>
+</form>  
+</div>
+
+</body>
+<script language="javaScript">
+
+	function calc_total() {
+		var qtd = parseInt(document.getElementById('tt1').value);
+		tot = qtd * 40;
+		document.getElementById('tot1').value = tot;
+
+		var soma = parseInt(document.getElementById('tt2').value);
+		total = soma * 40;
+		document.getElementById('tot2').value = total;
+
+		var mult = parseInt(document.getElementById('tt3').value);
+		resultado = mult * 40;
+		document.getElementById('tot3').value = resultado;
+
+		var total1 = parseInt(document.getElementById('tot1').value);
+		var total2 = parseInt(document.getElementById('tot2').value);
+		var total3 = parseInt(document.getElementById('tot3').value);
+		
+		var sma = parseInt(total1) + parseInt(total2) + parseInt(total3);
+		document.getElementById('TotalCompra').value = sma; 
+	}
+
+	
+ </script> 
+ 
+ <form target="pagseguro" method="post"   
+ action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add">  
+   
+ <!-- Campos obrigatórios -->  
+ <input type="hidden" name="receiverEmail" value="suporte@lojamodelo.com.br">  
+ <input type="hidden" name="currency" value="BRL">  
+   
+ <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
+ <input type="hidden" name="itemId" value="0001">  
+ <input type="hidden" name="itemDescription" value="Notebook Prata">  
+ <input type="hidden" name="itemAmount" value="24300.00">  
+ <input type="hidden" name="itemQuantity" value="1">  
+ <input type="hidden" name="itemWeight" value="1000">  
+   
+ <!-- Código de referência do pagamento no seu sistema (opcional) -->  
+ <input type="hidden" name="reference" value="REF1234">  
+   
+ <!-- submit do form (obrigatório) -->  
+ <input type="image" name="submit"   
+ src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-pagar.gif"   
+ alt="Pague com PagSeguro">  
+   
+</form>  
+</html>

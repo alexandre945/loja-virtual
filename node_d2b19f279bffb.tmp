@@ -1,0 +1,17 @@
+<script>
+function calc_total() {
+    var tot = parseInt(document.getElementbyId('ttl').value);
+       soma = ttl * 40;
+       document.getElementbyId('tot1').value = soma;
+} 
+
+
+
+
+
+
+</script>
+
+    
+            
+    
