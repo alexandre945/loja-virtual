@@ -1,0 +1,19 @@
+#control {
+    margin-left: 25px;
+    padding-top: 10px; 
+   
+}
+button{
+    background-color: rgb(40, 40, 175); color: cornsilk;
+     
+}
+body{
+    height: 100vh;
+    
+}
+ol{
+    padding-bottom: 15px;
+}
+img{
+    max-width: 200px;
+}

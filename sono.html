@@ -6,21 +6,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sono.css">
     <title>checkaut</title>
 </head>
 <body>
     <div id="app">
         <div :style="styles">
-            <a href="finaliza.html"><button style="background-color: rgb(40, 40, 175); color: cornsilk;">COMPRAR</button></a>
-            <a href="index.html"><button style="background-color: rgb(40, 40, 175); color: cornsilk;">VOLTAR</button></a>
-            <h1>Seu chà pronto em um minuto:</h1>
-            <h2>Facilidade e plasticidade</h2>
+            <div id="control">
+                <a href="finaliza.html"><button>COMPRAR</button></a>
+                <a href="index.html"><button>VOLTAR</button></a>
+                <h1>Seu chà pronto em um minuto:</h1>
+                <h2>Facilidade e plasticidade</h2>
+            </div>
+
+           
             <hr>
           
             <ul>
                <li v-for="(product, index) in products" :key="index">
                    <p>{{ product.title }} {{ product.preço }} </p>
-                   <img :src="product.image":alt="product.title" style="max-width: 200px;"><br>
+                   <img :src="product.image":alt="product.title"><br>
                </li>
                <ol> 
                    <h3>MODO DE PREPARO</h3>
@@ -57,10 +62,10 @@
                     styles: {
                         backgroundColor:'cadetblue',
                         color:'brack',
-                    
-                        
-                        
-                    }
+                       
+                    },
+                   
+                  
                     
                 }
             },
