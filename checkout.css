@@ -126,5 +126,8 @@ p#modo {
 	color: black;
 	font-size: 20pt;
 }
+#titulo {
+	margin-left: 10px;
+}
 
 
