@@ -5,6 +5,8 @@
 }
 button{
     background-color: rgb(40, 40, 175); color: cornsilk;
+    height: 35px;
+    border-radius: 8px;
      
 }
 body{
